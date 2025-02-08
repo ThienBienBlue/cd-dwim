@@ -1,0 +1,29 @@
+#+TITLE: cd-dwim
+
+* Installation
+
+Inside your shell's init file (e.g ~.bash_profile~) add the following line
+
+#+BEGIN_SRC bash
+  source path/to/cdd.sh
+#+END_SRC
+
+Running ~cd~ in a subshell won't change the current shell's directory. Instead source ~cdd~ as a function to run in the current shell.
+
+* Usage
+
+~cd~ but do what I mean (DWIM). Fuzzily change directories via case-insensitive ~find~.
+
+#+BEGIN_SRC bash
+  $ cdd foo bar baz
+  Changing to directory: `./foo/path/path/bar/baz'
+#+END_SRC
+
+But maybe ~cd~ with incremental search.
+
+#+BEGIN_SRC bash
+  $ cdi foo bar baz
+  ./foo/path/path/bar/baz (y?): <RET>
+  ./detour/foo/detour/bar/detour/baz (y?): <RET>
+  ./detour/foo/detour/bar/detour/baz/baz (y?): y
+#+END_SRC
