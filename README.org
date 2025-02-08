@@ -2,7 +2,7 @@
 
 * Installation
 
-Inside your shell's init file (e.g ~.bash_profile~) add the following line
+Inside your shell's init file (e.g ~.bashrc~) add the following line
 
 #+BEGIN_SRC bash
   source path/to/cdd.sh
